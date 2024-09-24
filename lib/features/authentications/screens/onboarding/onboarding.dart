@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shopifyapp/features/authentications/controllers/onboarding_controller.dart';
 import 'package:shopifyapp/features/authentications/screens/onboarding/widgets/onboarding_dot_nav.dart';
 import 'package:shopifyapp/features/authentications/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:shopifyapp/features/authentications/screens/onboarding/widgets/onboarding_page.dart';
@@ -12,10 +14,13 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnboardingController());
     return Scaffold(
       body: Stack(
         children: [
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               OnboardingPage(
                 image: TImages.onBoardingImage1,
