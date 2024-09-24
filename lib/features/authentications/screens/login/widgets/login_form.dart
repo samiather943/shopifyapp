@@ -19,7 +19,7 @@ class LoginForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email),
           ),
@@ -27,7 +27,7 @@ class LoginForm extends StatelessWidget {
             height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash)),
@@ -46,7 +46,7 @@ class LoginForm extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {},
-                  child: Text(TTexts.forgetPassword))
+                  child: const Text(TTexts.forgetPassword))
             ],
           ),
           const SizedBox(
@@ -55,7 +55,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: Get.width,
             child: ElevatedButton(
-                onPressed: () {}, child: Text(TTexts.signIn)),
+                onPressed: () {}, child: const Text(TTexts.signIn)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwItems,
@@ -63,7 +63,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: Get.width,
             child: OutlinedButton(
-                onPressed: () {}, child: Text(TTexts.createAccount)),
+                onPressed: () {}, child: const Text(TTexts.createAccount)),
           ),
         ],
       ),

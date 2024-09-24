@@ -20,7 +20,7 @@ class SocialButtons extends StatelessWidget {
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
               onPressed: () {},
-              icon: Image(
+              icon: const Image(
                   width: TSizes.iconMd,
                   height: TSizes.iconMd,
                   image: AssetImage(TImages.google))),
@@ -34,7 +34,7 @@ class SocialButtons extends StatelessWidget {
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
               onPressed: () {},
-              icon: Image(
+              icon: const Image(
                   width: TSizes.iconMd,
                   height: TSizes.iconMd,
                   image: AssetImage(TImages.facebook))),
