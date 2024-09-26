@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopifyapp/features/authentications/screens/password_configuration/forget_password.dart';
 import 'package:shopifyapp/features/authentications/screens/signup/signup.dart';
+import 'package:shopifyapp/nav_menu.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
 import 'package:shopifyapp/utils/constants/text_strings.dart';
 
@@ -57,7 +58,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: Get.width,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(TTexts.signIn)),
+                onPressed: () =>Get.offAll(()=>const NavMenu()), child: const Text(TTexts.signIn)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwItems,
