@@ -1,19 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
+import 'package:shopifyapp/utils/helpers/helper_functions.dart';
 
 class DividerWidget extends StatelessWidget {
   const DividerWidget({
     super.key,
     required this.dividerText,
-    required this.dark,
   });
 
-  final bool dark;
   final String dividerText;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -25,8 +24,7 @@ class DividerWidget extends StatelessWidget {
             endIndent: 5,
           ),
         ),
-        Text(dividerText,
-            style: Theme.of(context).textTheme.labelMedium),
+        Text(dividerText, style: Theme.of(context).textTheme.labelMedium),
         Flexible(
           child: Divider(
             color: dark ? TColors.darkGrey : TColors.grey,

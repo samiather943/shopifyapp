@@ -1,26 +1,24 @@
-
 import 'package:flutter/material.dart';
 import 'package:shopifyapp/utils/constants/image_strings.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
 import 'package:shopifyapp/utils/constants/text_strings.dart';
+import 'package:shopifyapp/utils/helpers/helper_functions.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({
     super.key,
-    required this.dark,
   });
-
-  final bool dark;
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
             height: 150,
-            image: AssetImage(
-                dark ? TImages.lightAppLogo : TImages.darkAppLogo)),
+            image:
+                AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo)),
         Text(
           TTexts.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,

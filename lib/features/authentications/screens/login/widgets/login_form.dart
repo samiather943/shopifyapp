@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopifyapp/features/authentications/screens/password_configuration/forget_password.dart';
+import 'package:shopifyapp/features/authentications/screens/signup/signup.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
 import 'package:shopifyapp/utils/constants/text_strings.dart';
 
@@ -45,7 +47,7 @@ class LoginForm extends StatelessWidget {
                 ],
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=>const ForgetPassword()),
                   child: const Text(TTexts.forgetPassword))
             ],
           ),
@@ -63,7 +65,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: Get.width,
             child: OutlinedButton(
-                onPressed: () {}, child: const Text(TTexts.createAccount)),
+                onPressed: ()=> Get.to(()=> const SignUpScreen()), child: const Text(TTexts.createAccount)),
           ),
         ],
       ),
