@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopifyapp/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:shopifyapp/features/shop/screens/home/widgets/home_app_bar.dart';
+
 
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +14,11 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             PrimaryHeaderContainer(
-              child: Container()
+              child: Column(
+                children: [
+                  HomeAppBar()
+                ],
+              )
 
             )
           ],
