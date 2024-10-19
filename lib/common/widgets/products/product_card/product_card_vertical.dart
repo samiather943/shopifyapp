@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:shopifyapp/common/styles/shadows.dart';
 import 'package:shopifyapp/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:shopifyapp/common/widgets/icons/circular_icon.dart';
 import 'package:shopifyapp/common/widgets/images/rounded_image.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
 import 'package:shopifyapp/utils/constants/image_strings.dart';
@@ -42,12 +43,31 @@ class ProductCardVertical extends StatelessWidget {
                   ),
                 ),
 
-                Container(
-                  color: dark ? TColors.black.withOpacity(0.9) : TColors.white.withOpacity(0.9),
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: CircularIcon(dark: dark,
+                  icon: Iconsax.heart5,
+                  color: Colors.red,),
                 )
               ],
             ),
-          )
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: TSizes.sm),
+            child: Column(
+              children: [
+                Text(
+                  'Green Nike Air Shoes',
+                  style: Theme.of(context).textTheme.labelLarge,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  textAlign: TextAlign.left,
+                )
+              ],
+            ),
+            )
         ],
       ),
     );
