@@ -65,6 +65,9 @@ class HomeScreen extends StatelessWidget {
                       TImages.promoBanner3,
                     ],
                   ),
+                const SizedBox(
+                  height: TSizes.spaceBtwSections,
+                ),
 
                   ProductCardVertical()
                 ],
