@@ -5,6 +5,7 @@ import 'package:shopifyapp/common/widgets/custom_shapes/containers/circular_cont
 import 'package:shopifyapp/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopifyapp/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:shopifyapp/common/widgets/images/rounded_image.dart';
+import 'package:shopifyapp/common/widgets/layouts/grid_layout.dart';
 import 'package:shopifyapp/common/widgets/products/product_card/product_card_vertical.dart';
 import 'package:shopifyapp/common/widgets/texts/section_heading.dart';
 import 'package:shopifyapp/features/shop/screens/home/widgets/home_app_bar.dart';
@@ -55,8 +56,7 @@ class HomeScreen extends StatelessWidget {
             )),
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: 
-              Column(
+              child: Column(
                 children: [
                   PromoSlider(
                     banners: [
@@ -65,11 +65,18 @@ class HomeScreen extends StatelessWidget {
                       TImages.promoBanner3,
                     ],
                   ),
-                const SizedBox(
-                  height: TSizes.spaceBtwSections,
-                ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
 
-                  ProductCardVertical()
+                  const SectionHeading(title: 'Popular Products'),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+
+                  GridLayout(itemcount: 4, itemBuilder: (_, index) => const ProductCardVertical())
+                  
+                 
                 ],
               ),
             )
