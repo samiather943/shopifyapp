@@ -6,7 +6,7 @@ import 'package:shopifyapp/utils/helpers/helper_functions.dart';
 
 class VerticalImageText extends StatelessWidget {
   const VerticalImageText({
-    super.key, required this.image, required this.title, this.textColor=TColors.white, this.backgroundColor=TColors.white, this.onTap,
+    super.key, required this.image, required this.title, this.textColor=TColors.white, this.backgroundColor, this.onTap,
   });
   final String image, title;
   final Color textColor;
@@ -33,7 +33,7 @@ class VerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  color: THelperFunctions.isDarkMode(context) ? TColors.dark : TColors.light,
+                  color: THelperFunctions.isDarkMode(context) ? TColors.light : TColors.dark,
                 ),
               ),
             ),

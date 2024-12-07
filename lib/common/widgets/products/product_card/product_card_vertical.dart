@@ -4,6 +4,7 @@ import 'package:shopifyapp/common/styles/shadows.dart';
 import 'package:shopifyapp/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:shopifyapp/common/widgets/icons/circular_icon.dart';
 import 'package:shopifyapp/common/widgets/images/rounded_image.dart';
+import 'package:shopifyapp/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:shopifyapp/common/widgets/texts/product_price_text.dart';
 import 'package:shopifyapp/common/widgets/texts/product_title_text.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
@@ -81,30 +82,23 @@ class ProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      )
-                    ],
-                  ),
+                  BrandTitleTextWithVerifiedIcon(
+                    title: 'Nike',
+                  )
                   
+      
+                ],
+              ),
+            ),
+            const Spacer(),
       
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const ProductPriceText(price: '30.0', isLarge: true,),
+                      const Padding(
+                        padding: EdgeInsets.only(left: TSizes.sm),
+                        child: ProductPriceText(price: '30.0', isLarge: true,),
+                      ),
                       
                       Container(
                         decoration: const BoxDecoration(
@@ -121,13 +115,10 @@ class ProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-      
-                ],
-              ),
-            )
           ],
         ),
       ),
     );
   }
 }
+

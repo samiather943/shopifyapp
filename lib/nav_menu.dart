@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopifyapp/features/personalization/settings/settings.dart';
 import 'package:shopifyapp/features/shop/screens/home/home.dart';
+import 'package:shopifyapp/features/shop/screens/store/store_screen.dart';
+import 'package:shopifyapp/features/shop/screens/wishlist/wishlist.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
 import 'package:shopifyapp/utils/helpers/helper_functions.dart';
 
@@ -37,8 +40,8 @@ class NavController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
   final screens=[
     const HomeScreen(),
-    Container(color: Colors.yellow,),
-    Container(color: Colors.red,),
-    Container(color: Colors.green,),
+    const StoreScreen(),
+    const Wishlist(),
+    const SettingsScreen(),
     ];
 }

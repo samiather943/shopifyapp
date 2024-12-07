@@ -6,7 +6,7 @@ import 'package:shopifyapp/utils/constants/sizes.dart';
 class CircularIcon extends StatelessWidget {
   const CircularIcon({
     super.key,
-    required this.dark, this.width, this.height, this.size = TSizes.lg, required this.icon, this.color, this.backgroundColor, this.onPressed,
+     required this.dark, this.width, this.height, this.size = TSizes.lg, required this.icon, this.color, this.backgroundColor, this.onPressed,
   });
 
   final double? width, height, size;

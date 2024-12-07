@@ -5,10 +5,10 @@ import 'package:shopifyapp/utils/constants/colors.dart';
 
 class CartCounterIcon extends StatelessWidget {
   const CartCounterIcon({
-    super.key, required this.onPressed, required this.iconColor,
+    super.key,  this.onPressed,this.iconColor,
   });
-  final VoidCallback onPressed;
-  final Color iconColor;
+  final VoidCallback? onPressed;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
