@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shopifyapp/common/widgets/texts/section_heading.dart';
@@ -9,16 +9,15 @@ import 'package:shopifyapp/features/shop/screens/product_details/widgets/product
 import 'package:shopifyapp/features/shop/screens/product_details/widgets/product_image_slider.dart';
 import 'package:shopifyapp/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:shopifyapp/features/shop/screens/product_details/widgets/rating_sharewidget.dart';
+import 'package:shopifyapp/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
 
-import 'package:shopifyapp/utils/helpers/helper_functions.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: const BottomAddToCart(),
       body: SingleChildScrollView(
@@ -30,25 +29,25 @@ class ProductDetailsScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
               child: Column(
                 children: [
-                  RatingAndShare(),
+                  const RatingAndShare(),
 
-                  ProductMetaData(),
+                  const ProductMetaData(),
 
-                  ProductAttributes(),
+                  const ProductAttributes(),
 
-                  SizedBox(height: TSizes.spaceBtwSections,),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
 
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(onPressed: (){}, child: Text('Checkout')),
+                    child: ElevatedButton(onPressed: (){}, child: const Text('Checkout')),
                   ),
-                  SizedBox(height: TSizes.spaceBtwSections,),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
 
-                  SectionHeading(title: 'Description', showActionButton: false,),
+                  const SectionHeading(title: 'Description', showActionButton: false,),
 
-                  SizedBox(height: TSizes.spaceBtwSections,),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
 
-                  ReadMoreText(
+                  const ReadMoreText(
                     'hbasbckj bajsk bjasbdkjsab bjbsa kjdbjksahdkjas jhjskahdkjahjdfkah fbj kjagjkfjashfjkhsafjhaskjfghajsgf ajsk jsahjkashfjhsajf ajsfjkashfgjsfjk ajsa jjsfjkhsajfhjkashf akjf',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
@@ -58,17 +57,17 @@ class ProductDetailsScreen extends StatelessWidget {
                     lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
                   ),
 
-                  Divider(),
-                  SizedBox(height: TSizes.spaceBtwItems,),
+                  const Divider(),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SectionHeading(title: 'Reviews(199)', showActionButton: false,),
-                      IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_3, size: 18,))
+                      const SectionHeading(title: 'Reviews(199)', showActionButton: false,),
+                      IconButton(onPressed: () => Get.to(() => const ProductReviews()), icon: const Icon(Iconsax.arrow_right_3, size: 18,))
                     ],
                   ),
 
-                  SizedBox(height: TSizes.spaceBtwSections,),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
 
                 ],
               ),
