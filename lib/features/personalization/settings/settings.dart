@@ -6,6 +6,7 @@ import 'package:shopifyapp/common/widgets/custom_shapes/containers/primary_heade
 import 'package:shopifyapp/common/widgets/list_tiles/profile_list_tile.dart';
 import 'package:shopifyapp/common/widgets/list_tiles/settings_tile.dart';
 import 'package:shopifyapp/common/widgets/texts/section_heading.dart';
+import 'package:shopifyapp/features/personalization/address/address.dart';
 import 'package:shopifyapp/features/personalization/profile/profile.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
@@ -52,7 +53,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Address',
                     subtitle: 'Set shopping delivery Address',
-                    onTap: () {},
+                    onTap: () => Get.to(()=> const AddressScreen()),
                   ),
                   SettingsTile(
                     icon: Iconsax.shopping_cart,
