@@ -20,28 +20,28 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
                 child: Column(
               children: [
-                const HomeAppBar(),
-                const SizedBox(
+                HomeAppBar(),
+                SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
-                const SearchContainer(
+                SearchContainer(
                   text: 'Search in Store',
                 ),
-                const SizedBox(
+                SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                  padding: EdgeInsets.only(left: TSizes.defaultSpace),
                   child: Column(
                     children: [
-                      const SectionHeading(
+                      SectionHeading(
                         title: 'Popular Catogories',
                         showActionButton: false,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: TSizes.spaceBtwItems,
                       ),
                       HomeCatogories(),
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  PromoSlider(
+                  const PromoSlider(
                     banners: [
                       TImages.promoBanner1,
                       TImages.promoBanner2,

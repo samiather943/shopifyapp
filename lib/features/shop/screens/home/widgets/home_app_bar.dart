@@ -20,8 +20,8 @@ class HomeAppBar extends StatelessWidget {
           Text(TTexts.homeAppbarSubTitle,style: Theme.of(context).textTheme.headlineSmall!.apply(color:TColors.white),),
         ],
       ),
-      actions: [
-        CartCounterIcon(onPressed: () { },iconColor: TColors.white,)
+      actions: const [
+        CartCounterIcon(iconColor: TColors.white,)
       ],
     );
   }
