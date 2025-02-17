@@ -8,6 +8,8 @@ import 'package:shopifyapp/common/widgets/list_tiles/settings_tile.dart';
 import 'package:shopifyapp/common/widgets/texts/section_heading.dart';
 import 'package:shopifyapp/features/personalization/address/address.dart';
 import 'package:shopifyapp/features/personalization/profile/profile.dart';
+import 'package:shopifyapp/features/shop/screens/cart/cart.dart';
+import 'package:shopifyapp/features/shop/screens/order/order.dart';
 import 'package:shopifyapp/utils/constants/colors.dart';
 import 'package:shopifyapp/utils/constants/sizes.dart';
 
@@ -59,13 +61,13 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',
                     subtitle: 'Add, remove products and move to checkout',
-                    onTap: () {},
+                    onTap: () => Get.to(()=> const CartScreen()),
                   ),
                   SettingsTile(
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subtitle: 'In-progress and completed orders',
-                    onTap: () {},
+                    onTap: () => Get.to(()=> const OrderScreen()),
                   ),
                   SettingsTile(
                     icon: Iconsax.bank,
